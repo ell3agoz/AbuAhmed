@@ -1,0 +1,406 @@
+h2.titlee {
+    background: #931800
+}
+
+.nav-tabs {
+    float: left
+}
+
+.nav-tabs li {
+    float: right;
+    margin-right: 12px
+}
+
+.nav-tabs li a {
+    background-color: #931800;
+    color: #fff;
+    float: right;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.nav-tabs .yema a {
+    background: #104783
+}
+
+.nav-tabs .tomat a {
+    background: #896000
+}
+
+.MatchsFlex {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 12px 0 12px;
+    margin: 0
+}
+
+.match-container {
+    overflow: hidden;
+    text-align: center;
+    background: #e8f0fe;
+    margin-bottom: 12px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 30%)
+}
+
+.match-container.ch-live {
+    order: 1
+}
+
+.match-container.ch-soon {
+    order: 2
+}
+
+.match-container.notstart {
+    order: 3
+}
+
+.match-container.ch-end {
+    order: 4
+}
+
+.match-container.soon div#result {
+    display: none
+}
+
+.match-container div#match-time {
+    margin-bottom: 10px
+}
+
+li {
+    list-style: none
+}
+
+#Header1 p {
+    display: none
+}
+
+.match-container h4 {
+    margin: 30px 0
+}
+
+.match-container a {
+    color: #222
+}
+
+.no-data__msg {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #666
+}
+
+.match-container.live #match-time,.match-container.gools #match-time,.match-container.finshed #match-time {
+    display: none
+}
+
+.match-container.comming #result,.match-container.soon #result {
+    display: none
+}
+
+.match-container[El="1"] .right-team,.match-container[El="1"] .left-team,.match-container[El="1"] .match-center {
+    width: 33.33333333%;
+    float: right
+}
+
+.match-container .right-team,.match-container .left-team,.match-container .match-center,.match-container .match-info {
+    width: 25%;
+    float: right
+}
+
+.team-logo {
+    float: right;
+    width: 50%
+}
+
+.left-team .team-logo {
+    float: left
+}
+
+.team-logo img {
+    margin: 22px auto;
+    display: block;
+    width: 60px;
+    height: 60px
+}
+
+.team-name {
+    margin: 20px auto;
+    display: table;
+    font-size: 13px;
+}
+
+.match-timing {
+    margin: 12px auto
+}
+
+#result {
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px
+}
+
+.match-timing .date,.date.live:before {
+    background: #263545;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 90px;
+    display: table;
+    margin: auto;
+    padding: 0 4px;
+    position: relative;
+    color: #fff
+}
+
+.date.live:after,.date.live:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 90px;
+    height: 35px;
+    display: block
+}
+
+.date.live:before {
+    z-index: 0;
+    background-color: #ff00007a;
+    animation: pulse-border 1s ease-out infinite;
+    border-radius: 8px
+}
+
+.date.live:after {
+    z-index: 1;
+    border-radius: 8px;
+    transition: all .2s
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0
+    }
+}
+
+.date.live {
+    background-color: #931800
+}
+
+.date.end {
+    background-color: #474747
+}
+
+.date.soon {
+    background: #0f6f37
+}
+
+.match-container[El="1"] .match-info {
+    border-top: 1px solid #ddd;
+    display: table;
+    overflow: hidden;
+    width: 100%
+}
+
+.match-container .match-info {
+    border-right: 1px solid #ddd;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.match-container[El="1"] .match-info li {
+    display: inline-block;
+    float: right;
+    width: 33.3333%;
+    font-size: 14px;
+    font-weight: 100;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 4px;
+    overflow: hidden
+}
+
+.match-container .match-info li {
+    display: block;
+    float: right;
+    text-align: right;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 100;
+    margin: 0 auto;
+    padding: 0 4px;
+    overflow: hidden;
+    font-weight: 550;
+}
+
+.match-info li:before {
+    content: "🎤";
+    margin-left: 7px
+}
+
+.match-info li:first-child:before {
+    content: "📺"
+}
+
+.match-info li:last-child:before {
+    content: "🏆"
+}
+
+.overlay-match {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    background-color: hsl(0deg 0% 0% / 65%);
+    z-index: 9
+}
+
+.match-container:hover .overlay-match {
+    opacity: 1
+}
+
+.text-match {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 45px;
+    margin: auto;
+    left: 0;
+    top: 0;
+    width: 45px;
+    z-index: 9999;
+    background: no-repeat center url("data:image/svg+xml;charset=utf8,%3Csvg aria-hidden='true' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' %3E%3Cpath fill='%23fff' d='M256,0C114.617,0,0,114.615,0,256s114.617,256,256,256s256-114.615,256-256S397.383,0,256,0z M344.48,269.57l-128,80  c-2.59,1.617-5.535,2.43-8.48,2.43c-2.668,0-5.34-0.664-7.758-2.008C195.156,347.172,192,341.82,192,336V176 c0-5.82,3.156-11.172,8.242-13.992c5.086-2.836,11.305-2.664,16.238,0.422l128,80c4.676,2.93,7.52,8.055,7.52,13.57 S349.156,266.641,344.48,269.57z' class=''%3E%3C/path%3E%3C/svg%3E")
+}
+
+.match-container.end div#match-time {
+    display: none
+}
+
+@media screen and (max-width: 850px) {
+    .team-logo {
+        display:inline-block;
+        width: 100%
+    }
+
+    .team-logo img {
+        display: table;
+        margin: 10px auto;
+        width: 60px;
+        height: 60px
+    }
+
+    .team-name {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 12px
+    }
+
+    .match-container #match-time {
+        font-size: 14px
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .match-container .right-team, .match-container .left-team, .match-container .match-center, .match-container .match-info {
+        width: 33%;
+        float: right;
+    }
+
+    .match-container[El="1"] .match-info li,.match-container .match-info li {
+        width: 89%;
+        margin: 0;
+        text-align: center;
+        display: inline-block;
+        float: right
+    }
+
+    .match-container[El="1"] .match-info li:nth-child(1),.match-container[El="1"] .match-info li:nth-child(2),.match-container .match-info li:nth-child(1),.match-container .match-info li:nth-child(2) {
+        display: none
+    }
+
+    .match-container .right-team,.match-container[Elx="2"] .left-team,.match-container[Elx="2"] .match-center {
+        width: 33.3333%;
+        float: right
+    }
+
+    .match-container .match-info {
+        border-top: 1px solid #ddd;
+        display: table;
+        overflow: hidden;
+        width: 109%
+    }
+
+    .box-title {
+        /* padding: 12px 12px 0; */
+    }
+
+    .box-title h2 {
+        float: none;
+        margin-bottom: 12px;
+        text-align: center
+    }
+
+    .nav-tabs {
+        float: none;
+        margin: 0;
+        display: inline-block;
+        width: 100%
+    }
+
+    .nav-tabs li {
+        width: 33.333%;
+        margin: 0
+    }
+
+    .nav-tabs li a {
+        text-align: center;
+        padding: 0;
+        float: none;
+        display: block
+    }
+
+    .nav-tabs .toma a {
+        margin: 0 6px
+    }
+
+    .team-logo img {
+        width: 50px;
+        height: 50px
+    }
+
+    .Night .match-container[El="1"] .match-info,.Night .match-container .match-info {
+        border-top: 1px solid #263545
+    }
+
+    .match-timing .date, .date.live:before {
+        font-size: 12px;
+        width: 80px
+    }
+}
+
+h2.title {
+    float: right;
+}
+
+.match-container.comming .result,.match-container.commingsoon .result,.match-container.soon .result,.match-container.end #match-time,.match-container.live #match-time {
+    display: none
+}
